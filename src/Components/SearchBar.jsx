@@ -1,18 +1,26 @@
-import React from 'react';
-const SearchBar = () => {
+function SearchBar({ searchTerm, setSearchTerm }) {
     return (
         <section className='search-container'>
             <h1>
-                Believe in Finding it
+                Find Your Property
             </h1>
-            <h3>
-                Search for the gadget, you are looking for [rent or sale]
-            </h3>
+
+            <input
+                className="search-box"
+                type="text"
+                placeholder="Search..."
+                value={searchTerm} // controlled input
+                onChange={(e) => setSearchTerm(e.target.value)}
+            />
+
             <form>
-                <label htmlFor="term">Search Gadget or Location</label><br />
-                <input type="text" id="term" name="term" /><br />
-                <button>For Sale</button>
-                <button>For Rent</button>
+                <label htmlFor="type">Property type</label><br />
+                <select name="type" id="type">
+                    <option value="house">House</option>
+                    <option value="Flat">Flat</option>
+                </select>
+                <button>Search</button>
+                <button>Reset</button>
             </form>
         </section>
     );
