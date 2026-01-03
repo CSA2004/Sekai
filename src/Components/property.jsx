@@ -7,7 +7,7 @@ function Property({ searchTerm, onFavourite, favouriteprop}) {
     const [error, setError] = useState(null)
 
     useEffect(() => {
-        fetch('/properties.json')
+        fetch('./properties.json')
             .then((res) => {
                 if (!res.ok) throw new Error('Failed to fetch properties.json');
                 return res.json()

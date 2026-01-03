@@ -9,7 +9,7 @@ function App() {
   const [favouriteprop, setFavourite] = useState([])
 
   const addFavourite = property => {
-    if (!favouriteprop.some(p => p.location !== property.location)) {
+    if (!favouriteprop.some(p => p.location === property.location)) {
       setFavourite([...favouriteprop, property])
     }
   }
