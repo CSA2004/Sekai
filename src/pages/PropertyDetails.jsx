@@ -58,7 +58,6 @@ const PropertyDetails = () => {
             <Box className="tabs-wrapper">
                 <Tabs value={tabIndex} onChange={handleTabChange} className="details-tabs">
                     <Tab label="Description" className="detail-tab" />
-                    <Tab label="Floor Plan" className="detail-tab" />
                     <Tab label="Map" className="detail-tab" />
                 </Tabs>
 
@@ -71,13 +70,6 @@ const PropertyDetails = () => {
                     )}
 
                     {tabIndex === 1 && (
-                        <figure className="floorplan-section">
-                            <Typography variant="h6">Floor Plan</Typography>
-                            <img src="/images/floorplan.png" alt="Property Floor Plan" className="floorplan-img" />
-                        </figure>
-                    )}
-
-                    {tabIndex === 2 && (
                         <section className="map-section">
                             <Typography variant="h6">Location</Typography>
                             <div className="map-responsive-container">
